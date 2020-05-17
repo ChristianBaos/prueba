@@ -36,12 +36,11 @@ Auth::routes();
 
 // LAB 15 //
 
-Route::get('/', 'ChatsController@index');
-Route::get('messages', 'ChatsController@fetchMessages');
-Route::post('messages', 'ChatsController@sendMessage');
+//Route::get('/', 'ChatsController@index');
+//Route::get('messages', 'ChatsController@fetchMessages');
+//Route::post('messages', 'ChatsController@sendMessage');
 
 
 //LAB 16 //
-
-//Route::get('/', function() {
-  //   return view('Practicasjq/index2');});
+Route::get('/', function() {
+    return view('Practicasjq/index2');});
