@@ -20,7 +20,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
-  <link rel="stylesheet" href="{{asset('/dist/css/skins/skin-blue.min.css')}}">
+  <link rel="stylesheet" href="{{asset('/dist/css/skins/skin-green.min.css')}}">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,7 +53,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-green sidebar-mini">
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -268,8 +268,9 @@ desired effect
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="http://127.0.0.1:8000"><i class=" fa fa-home "></i> <span>Inicio</span></a></li>
+        <li class="active"><a href=""><i class=" fa fa-home "></i> <span>Inicio</span></a></li>
         <li><a href="vehiculo"><i class=" fa fa-car" > </i> <span>Vehiculo</span></a></li>
+        <li><a href="ingresoV"><i class=" fa fa-car" > </i> <span>Ingreso del vehiculo</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-cog"></i> <span>Opciones</span>
             <span class="pull-right-container">
@@ -277,8 +278,8 @@ desired effect
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
+            <li><a href="tarifa" class="fa fa-money">  Tarifa</a></li>
+            <li><a href="#" >Link in level 2</a></li>
           </ul>
         </li>
       </ul>

@@ -13,13 +13,35 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-    // return view('auth/login');
+     return view('auth/login');
+     //return view('welcome');
 });
+/*
+Route::get('/', function () {
+     $tarifa = App\Tipo_vehiculo::findOrFail();
+     //$tarifa = App\Tipo_vehiculo::All();
+     return $tarifa;
+});*/
 
 Route::resource('vehiculo', 'VehiculoController');
+ Route::resource('tarifa','TarifaController');
 
+ Route::resource('ingresoV','Ingreso_vehiculoController');
+ Route::resource('ticket','TicketController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+ Route::get('/home', 'HomeController@index')->name('home');
+
+
+// LAB 15 //
+
+//Route::get('/', 'ChatsController@index');
+//Route::get('messages', 'ChatsController@fetchMessages');
+//Route::post('messages', 'ChatsController@sendMessage');
+
+
+//LAB 16 //
+
+//Route::get('/', function() {
+  //   return view('Practicasjq/index2');});
