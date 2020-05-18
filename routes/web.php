@@ -43,4 +43,4 @@ Auth::routes();
 
 //LAB 16 //
 Route::get('/', function() {
-    return view('Practicasjq/index2');});
+    return view('Practicasjq/index');});
