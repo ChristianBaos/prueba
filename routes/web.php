@@ -12,10 +12,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
-     return view('auth/login');
-     //return view('welcome');
-});*/
+Route::get('/', function () { return view('auth/login'); return view('welcome');
+});
 /*
 Route::get('/', function () {
      $tarifa = App\Tipo_vehiculo::findOrFail();
@@ -23,15 +21,15 @@ Route::get('/', function () {
      return $tarifa;
 });*/
 
-// Route::resource('vehiculo', 'VehiculoController');
-// Route::resource('tarifa','TarifaController');
+ Route::resource('vehiculo', 'VehiculoController');
+ Route::resource('tarifa','TarifaController');
 
-// Route::resource('ingresoV','Ingreso_vehiculoController');
-// Route::resource('ticket','TicketController');
+ Route::resource('ingresoV','Ingreso_vehiculoController');
+ Route::resource('ticket','TicketController');
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 
 // LAB 15 //
@@ -42,5 +40,9 @@ Auth::routes();
 
 
 //LAB 16 //
-Route::get('/', function() {
-    return view('Practicasjq/index');});
+//Route::get('/', function() {  return view('Practicasjq/index');});
+
+
+//LAB 17//
+
+Route::get('imprimirVehiculos','PdfController@imprimirVehiculos')->name('imprimirVehiculos');

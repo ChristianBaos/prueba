@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Incluyendo JQuery-->
     <script src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
+    
     <title>Practicas Js</title>
     <script>
         $(document).ready(function() {
@@ -132,5 +133,6 @@
 
 
 </body>
+
 
 </html>

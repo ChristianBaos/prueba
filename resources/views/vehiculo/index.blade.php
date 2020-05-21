@@ -5,7 +5,10 @@
         <h3>Listado de Vehiculos
             <a href="vehiculo/create">
                 <button class="btn btn-warning fa fa-car">Ingresar Nuevo Vehiculo</button></a></h3>
-                @include('vehiculo.search')
+        <h3>Reporte Todos Los Vehiculos <a href="\imprimirVehiculos"><button class="btn btn-success">
+        <span class="glyphicon glyphicon-download-alt"></span> Generar PDF</button></a></h3>
+        @include('vehiculo.search')
+
     </div>
 </div>
 <div class="row">
@@ -26,20 +29,16 @@
                     <td>
                         <a href="{{URL::action('VehiculoController@edit',$vehiculo->id)}}">
                             <button class="btn btn-success"> <span class="glyphicon glyphicon-refresh"></span>Editar Vehiculo</button></a>
-                            <a href="" data-target="#modal-delete-{{$vehiculo->id}}" data-toggle="modal">
-                            <button class="btn btn-danger"> <span class="glyphicon glyphicon-trash"> </span> Retirar Vehiculo 
-                        </button></a>
+                        <a href="" data-target="#modal-delete-{{$vehiculo->id}}" data-toggle="modal">
+                            <button class="btn btn-danger"> <span class="glyphicon glyphicon-trash"> </span> Retirar Vehiculo
+                            </button></a>
                     </td>
                 </tr>
-                
+
                 @include('vehiculo.modal')
                 @endforeach
             </table>
         </div>
         {{$vehiculos->render()}}
     </div>
-</div>
-@endsection
-
-
-
+</div>@endsection

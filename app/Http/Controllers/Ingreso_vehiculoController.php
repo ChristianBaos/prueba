@@ -39,13 +39,13 @@ class Ingreso_vehiculoController extends Controller
      */
     public function store(Request $request)
     {
-        $ingreso=new Ingreso_vehiculo;
-        $ingreso->Id_Ingreso=$request->get('Id_Ingreso');
-        $ingreso->Fecha_Ingreso=$request->get('Fecha_Ingreso');
-        $ingreso->estado=$request->get('estado');
-        $ingreso->vehiculo_id_vehiculo=$request->get('vehiculo_id_vehiculo'); 
-        $ingreso->users_id=$request->get('users_id');
+        $ingreso = new Ingreso_Vehiculo;
+        $ingreso->Id_Ingreso = $request->get('id_ingreso');
+        $ingreso->Fecha_Ingreso = $request->get('fecha_ingreso');
+        $ingreso->Estado = $request->get('estado');
+        $ingreso->Users_Id = $request->get('users_id');
         $ingreso->save();
+//dd($ingreso);
         return Redirect::to('ingresoV');
     }
 

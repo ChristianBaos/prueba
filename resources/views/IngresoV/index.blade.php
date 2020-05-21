@@ -15,7 +15,6 @@
                 <thead>
                     <th>Id</th>
                     <th>Fecha</th>
-                    <th>Vehiculo-Placa</th>
                     <th>Estado</th>
                     <th>Usuario</th>
                     <th>Opciones</th>
@@ -25,16 +24,14 @@
 
                     <td>{{ $ingreso->Id_Ingreso}}</td>
                     <td>{{ $ingreso->Fecha_Ingreso}}</td>
-                   
-                    <td>{{ $ingreso->Vehiculo_Id_Vehiculo}}</td> 
                     <td>{{ $ingreso->Estado}}</td>
                     <td>{{ $ingreso->Users_Id}}</td>
                     <td>
-                        <a href="{{URL::action('Ingreso_vehiculoController@edit',$ingreso->id)}}">
+                        <a href="{{URL::action('Ingreso_vehiculoController@edit',$ingreso->Id_Ingreso )}}">
 
                             <button 
                             class="btn btn-success"> <span class="glyphicon glyphicon-refresh"></span>Editar</button></a>
-                            <a href="" data-target="#modal-delete-{{$ingreso->id}}" data-toggle="modal">
+                            <a href="" data-target="#modal-delete-{{$ingreso->Id_Ingreso }}" data-toggle="modal">
                             <button class="btn btn-danger"> <span class="glyphicon glyphicon-trash"> </span>Retirar Vehiculo
                         </button></a>
                     </td>
